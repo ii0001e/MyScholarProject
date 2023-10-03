@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kuupäevad</title>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+    <script>
+        function ajavalik(aeg, sss){
+            var aeg1=$("#dateala1").datepicker("getDate");
+            var aeg2=$("#dateala2").datepicker("getDate");
+            var ms1=aeg1.getTime();
+            var ms2=aeg2.getTime();
+            var vahe=ms2-ms1;
+            var arv=vahe/(1000*60*60*24);
+            $("#vastus").html(arv + " päeva");
+
+        }
+        $(document).ready(function(){
+            $("#dateala1").datepicker({
+                onload: ajavalik,
+                dateFormat: 'yy-mm-dd',
+                firstDay:1,
+                dayNamesMin: ['P', 'E', 'T', 'K', 'N', 'R', 'L']
+            });
+            $("#dateala2").datepicker({
+                onload: ajavalik,
+                dateFormat: 'yy-mm-dd',
+                firstDay:1,
+                dayNamesMin:['P','E', 'T', 'K', 'N', 'R', 'L' ]
+            });
+        });
+
+    </script>
+</head>
+<body>
+<div id="dateala1"></div>
+<div id="dateala2"></div>
+<strong>Kuupäevade vahe:</strong>
+<div id="vastus"></div>
+
+</body>
+</html>

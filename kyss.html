@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <!-- tehniline info -->
+  <title>Ivanenko koduleht</title>
+  <meta charset="UTf-8">
+  <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/style_second_design.css">
+  <link rel="stylesheet" type="text/css" href="css/kyss.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/Kuss.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".dvd").hide();
+    });
+    function naitatext(divid) {
+      $(divid).show(1000);
+    }
+    function hidetext(divid){
+      $(divid).hide();
+    }
+  </script>
+</head>
+<body>
+<header>
+  <h1>Ivanenko leht</h1>
+  <h2>Veebirakenduste töödeleht</h2>
+</header>
+
+<!--navigeerimismenüü -->
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Avaleht</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Old_Design/index.html">Vana avaleht</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="tood.html">Tööde lingid</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oppmat.html">Õppemateriaalid</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="form.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="WP">Wordpress-portfoolio</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main>
+  <div class="container"><h1>Veebirakenduste käsimused</h1></div>
+<div class="container">
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus1------------------>
+    <div id="k1">
+      <h3 onclick="naitatext('#kk1')">Milleks WWW (World Wide Web) algselt loodi?</h3>
+      <div id="kk1" class="dvd">
+        <label for ="kys1v1">
+          <input type="radio" name="kys1" id="kys1v1" onchange="kontrollkys1()">
+          <span>Et kiirendada teadlaste vahel pilte ja teksti sisaldavate teadusaruannete vahetust.</span>
+        </label>
+        <label for="kys1v2">
+          <input type="radio" name="kys1" id="kys1v2" onchange="kontrollkys1()">
+          <span>Et levitada keerulist multimeediumit.</span>
+        </label>
+        <label for="kys1v3">
+          <input type="radio" name="kys1" id="kys1v3" onchange="kontrollkys1()">
+          <span>Et levitada keerulist multimeediumit.</span>
+        </label>
+        <label for="kys1v4">
+          <input type="radio" name="kys1" id="kys1v4" onchange="kontrollkys1()">
+          <span>Alternatiiviks FTP’le (file transfer protocol).</span>
+        </label>
+      </div>
+      <br>
+      <div id="vastus1" onclick="hidetext('#kk1')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus2------------------>
+    <div id="k2">
+      <h3 onclick="naitatext('#kk2')">Milline toodud lausetest on ÕIGE veebisaidi kohta, mis kasutab kliendipoolset skriptimist?</h3>
+      <div id="kk2" class="dvd">
+        <label for ="kys2v1">
+          <input type="radio" name="kys2" id="kys2v1" onchange="kontrollkys2()">
+          <span>Et sait töötaks korrektselt, peab serverisse paigaldama eritarkvara.</span>
+        </label>
+        <label for="kys2v2">
+          <input type="radio" name="kys2" id="kys2v2" onchange="kontrollkys2()">
+          <span>Osa programmi koodi käivitatakse kasutaja arvutis.</span>
+        </label>
+        <label for="kys2v3">
+          <input type="radio" name="kys2" id="kys2v3" onchange="kontrollkys2()">
+          <span>Veebisaidi lehtede koopiad peavad asuma kohapeal kasutaja arvutis.</span>
+        </label>
+        <label for="kys2v4">
+          <input type="radio" name="kys2" id="kys2v4" onchange="kontrollkys2()">
+          <span>Kohalik andmebaaside tugi peab asuma kasutaja arvutis.</span>
+        </label>
+      </div>
+      <br>
+      <div id="vastus2" onclick="hidetext('#kk2')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus3------------------>
+    <div id="k3">
+      <h3 onclick="naitatext('#kk3')">Milline lause on TÕENE veebilehe esiplaani (teksti) ja tausta värvide osas?  </h3>
+      <div id="kk3" class="dvd">
+        <input type="checkbox" name="kys3" id="kys3v1" onchange="kontrollkys3()">
+        <label for ="kys3v1">Kahe värvi kontrastsus ei tohi olla liiga suur.</label>
+        <br>
+        <input type="checkbox" name="kys3" id="kys3v2" onchange="kontrollkys3()">
+        <label for="kys3v2">Tumedad värvid sobivad kõige paremini taustaks ja külmad, küllastamata värvid sobivad tekstiks.</label>
+        <br>
+        <input type="checkbox" name="kys3" id="kys3v3" onchange="kontrollkys3()">
+        <label for="kys3v3">Nii taustal kui esipinnal tuleb vältida liiga paljude värvide kasutamist.</label>
+        <br>
+        <input type="checkbox" name="kys3" id="kys3v4" onchange="kontrollkys3()">
+        <label for="kys3v4">Eredaid värve (nt punakaslilla, kollane) peab vältima, kuna need võivad teha teksti lugemise raskeks.</label>
+      </div>
+      <br>
+      <div id="vastus3" onclick="hidetext('#kk3')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus4------------------>
+    <div id="k4">
+      <h3 onclick="naitatext('#kk4')">Millega tuleb arvestada, kui andmebaas ühendatakse veebiliidesega?</h3>
+      <div id="kk4" class="dvd">
+        <input type="checkbox" name="kys4" id="kys4v1" onchange="kontrollkys4()">
+        <label for ="kys4v1">Tuleb osta kallihinnaline tarkvara uue süsteemi ülesehitamiseks.</label>
+        <br>
+        <input type="checkbox" name="kys4" id="kys4v2" onchange="kontrollkys4()">
+        <label for="kys4v2">Kui serverit ei saa võimsamaks ümber ehitada, siis ei saa kasutajate arvu suurendada.</label>
+        <br>
+        <input type="checkbox" name="kys4" id="kys4v3" onchange="kontrollkys4()">
+        <label for="kys4v3">Kui veebilehe ilme on oluliselt erinev algupärasest võivad kasutajad segadusse sattuda.</label>
+        <br>
+        <input type="checkbox" name="kys4" id="kys4v4" onchange="kontrollkys4()">
+        <label for="kys4v4">Sideprotseduurid tuleb üle vaadata, kuna HTTP ühendus kliendi ja server vahel ei ole püsiv (katkeb peale igat päringut/vastust).</label>
+      </div>
+      <br>
+      <div id="vastus4" onclick="hidetext('#kk4')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus5------------------>
+    <div id="k5">
+      <h3 onclick="naitatext('#kk5')">Milline lause on ÕIGE, kui HTML lehekülg sisaldab järgnevat linki?</h3>
+      <div id="kk5" class="dvd">
+        <label for ="kys5v1">
+          <input type="radio" name="kys5" id="kys5v1" onchange="kontrollkys5()">
+          <span>Video mängitakse ette ainult siis kui kasutaja klikib lingile ja kui “mov” (QuickTime) formaati tunnistav esitustarkvara on arvutisse paigaldatud.</span>
+        </label>
+        <label for="kys5v2">
+          <input type="radio" name="kys5" id="kys5v2" onchange="kontrollkys5()">
+          <span>Video mängitakse ette ainult siis, kui kasutaja klikib lingile; kui “mov” (QuickTime) formaati ei tunta, konverteeritakse fail automaatselt formaati, mille esitamistarkvara on arvutis olemas.</span>
+        </label>
+        <label for="kys5v3">
+          <input type="radio" name="kys5" id="kys5v3" onchange="kontrollkys5()">
+          <span>Video mängitakse kohe automaatselt ette, kui leht on laetud.</span>
+        </label>
+        <label for="kys5v4">
+          <input type="radio" name="kys5" id="kys5v4" onchange="kontrollkys5()">
+          <span>Niipea, kui lehekülg on laetud, näidatakse kasutajale dialoogiakent küsimusega, kas mängida kohe video või ei.</span>
+        </label>
+      </div>
+      <br>
+      <div id="vastus5" onclick="hidetext('#kk5')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus6------------------>
+    <div id="k6">
+      <h3 onclick="naitatext('#kk6')">Millised valikud võivad parandada veebilehe loetavust?</h3>
+      <div id="kk6" class="dvd">
+        <input type="checkbox" name="kys6" id="kys6v1" onchange="kontrollkys6()">
+        <label for ="kys6v1">Kasutada lehel laiu reavahesid.</label>
+        <br>
+        <input type="checkbox" name="kys6" id="kys6v2" onchange="kontrollkys6()">
+        <label for="kys6v2">Kasutada täpploendeid (bullet points), et rühmitada olulised tekstilõigud.</label>
+        <br>
+        <input type="checkbox" name="kys6" id="kys6v3" onchange="kontrollkys6()">
+        <label for="kys6v3">Kasutada ainult suurtähti.</label>
+        <br>
+        <input type="checkbox" name="kys6" id="kys6v4" onchange="kontrollkys6()">
+        <label for="kys6v4">Kasutada suuri kontraste teksti- ja taustavärvi vahel.</label>
+      </div>
+      <br>
+      <div id="vastus6" onclick="hidetext('#kk6')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus7------------------>
+    <div id="k7">
+      <h3 onclick="naitatext('#kk7')">Milline lause kirjeldab XSL keele (Extensible Stylesheet Language) omadusi?</h3>
+      <div id="kk7" class="dvd">
+        <label for ="kys7v1">
+          <input type="radio" name="kys7" id="kys7v1" onchange="kontrollkys7()">
+          <span>Võimaldab uuendada veebilehe sisu automaatselt teatud ajavahemikel.</span>
+        </label>
+        <label for="kys7v2">
+          <input type="radio" name="kys7" id="kys7v2" onchange="kontrollkys7()">
+          <span>Võimaldab XML faili põhjal koostada veebilehitsejas näitamiseks sobiliku XHTML-faili.</span>
+        </label>
+        <label for="kys7v3">
+          <input type="radio" name="kys7" id="kys7v3" onchange="kontrollkys7()">
+          <span>Võimaldab luua tavalistel HTML lehtedel dünaamilisi efekte, näiteks lahtirullimisi.</span>
+        </label>
+        <label for="kys7v4">
+          <input type="radio" name="kys7" id="kys7v4" onchange="kontrollkys7()">
+          <span>Aitab lisada CSSile täiendavaid kujunduskäske.</span>
+        </label>
+      </div>
+      <br>
+      <div id="vastus7" onclick="hidetext('#kk7')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus8------------------>
+    <div id="k8">
+      <h3 onclick="naitatext('#kk8')">Millised valikud võivad parandada veebilehe loetavust?</h3>
+      <div id="kk8" class="dvd">
+        <input type="checkbox" name="kys8" id="kys8v1" onchange="kontrollkys8()">
+        <label for ="kys8v1">Ainult oluline info on rõhutatud.</label>
+        <br>
+        <input type="checkbox" name="kys8" id="kys8v2" onchange="kontrollkys8()">
+        <label for="kys8v2">Kogu sisu asendus metafooridega.</label>
+        <br>
+        <input type="checkbox" name="kys8" id="kys8v3" onchange="kontrollkys8()">
+        <label for="kys8v3">Visuaalsete elementide lisamine teksti juurde.</label>
+        <br>
+        <input type="checkbox" name="kys8" id="kys8v4" onchange="kontrollkys8()">
+        <label for="kys8v4">Keeruliste taustade kasutamine presentatsioonides.</label>
+      </div>
+      <br>
+      <div id="vastus8" onclick="hidetext('#kk8')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus9------------------>
+    <div id="k9">
+      <h3 onclick="naitatext('#kk9')">Valida järgnevatest valikutest lause, mis KÕIGE TÄPSEMINI kirjeldab seda, mida antud HTML koodilõik teeb:</h3>
+      <div id="kk9" class="dvd">
+        <div style="background: #f3f3f3">
+          &lt;a href="/accountsection/newlist.html"&gt;<br>
+          &lt;img src="inimene.gif" alt="Hotpeople List"&gt;<br>
+          &lt;/a&gt;
+          <br>
+        </div>
+        <label for ="kys9v1">
+          <input type="radio" name="kys9" id="kys9v1" onchange="kontrollkys9()">
+          <span>Koodilõik ei tööta üldse, vaid kuvab veateate (error) 404.</span>
+        </label>
+        <label for="kys9v2">
+          <input type="radio" name="kys9" id="kys9v2" onchange="kontrollkys9()">
+          <span>Näitab inimese pilti ekraanil; pilt on hüperlink teisele lehele nimega newlist; Kui veebilehitseja ei leia gif pilti, siis kuvatakse alternatiivne tekst.</span>
+        </label>
+        <label for="kys9v3">
+          <input type="radio" name="kys9" id="kys9v3" onchange="kontrollkys9()">
+          <span>Kuvab veebilehitsejas ankurpunkti inimeste lehele, mis moodustab hotpeople-nimekirja inimeste jaoks või siis kuvab pildifailide nimekirja.</span>
+        </label>
+        <label for="kys9v4">
+          <input type="radio" name="kys9" id="kys9v4" onchange="kontrollkys9()">
+          <span>Kuvab ekraanil viida newlist, mis on hüperlink inimese pildile.</span>
+        </label>
+      </div>
+      <br>
+      <div id="vastus9" onclick="hidetext('#kk9')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class=card>
+      <div class="card-body">
+    <!-----------------------Küsimus10------------------>
+    <div id="k10">
+      <h3 onclick="naitatext('#kk10')">Millised valikud võivad parandada veebilehe loetavust?</h3>
+      <div id="kk10" class="dvd">
+        <input type="checkbox" name="kys10" id="kys10v1" onchange="kontrollkys10()">
+        <label for ="kys10v1">Ainult oluline info on rõhutatud.</label>
+        <br>
+        <input type="checkbox" name="kys10" id="kys10v2" onchange="kontrollkys10()">
+        <label for="kys10v2">Kogu sisu asendus metafooridega.</label>
+        <br>
+        <input type="checkbox" name="kys10" id="kys10v3" onchange="kontrollkys10()">
+        <label for="kys10v3">Visuaalsete elementide lisamine teksti juurde.</label>
+        <br>
+        <input type="checkbox" name="kys10" id="kys10v4" onchange="kontrollkys10()">
+        <label for="kys10v4">Keeruliste taustade kasutamine presentatsioonides.</label>
+      </div>
+      <br>
+      <div id="vastus10" onclick="hidetext('#kk1')"></div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div>
+    <input type="submit" name="sbmt" id="sbmt" onclick="scoreCount()">
+    <div id="scorevastus"></div>
+  </div>
+</main>
+</body>
+<footer class="bg-light py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>&copy; 2023 - Ivan Ivanenko</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="index.html">Avaleht</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>

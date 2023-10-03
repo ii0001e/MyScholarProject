@@ -1,0 +1,247 @@
+﻿html body {
+    height: 100%;
+}
+
+body {
+    background-image: url(../pictures/background.jpg);
+    color: #2F4F4F;
+    font-family: 'Comic Sans MS', serif;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    border-bottom: solid 3pt #000;
+    width: 100%;
+    background-color: rgba(254, 252, 251, 0.75);
+    border-top: solid 1pt #000;
+    border-left: solid 1pt #000;
+    border-right: solid 1pt #000;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    padding: 2%;
+}
+
+main {
+    margin-top: 1%;
+    width: 100%;
+    background-color: rgba(254, 252, 251, 0.8);
+    border-left: solid 1pt #000;
+    border-right: solid 1pt #000;
+    padding: 3% 2%;
+}
+
+table caption {
+    padding: 1%;
+    width: 50%;
+/*background-color: #D0FFE8;*/
+}
+
+#rootsi {
+    width: 330px;
+    height: 210px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#rootsi tr:nth-child(2) {
+    /*2.rida*/
+    background-color: gold;
+    height: 26%;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(1),
+#rootsi tr:nth-child(3) td:nth-child(1) {
+    /*1rida 1 lahter, 3.rida 1.lahter*/
+    background-color: blue;
+    width: 20%;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(2),
+#rootsi tr:nth-child(3) td:nth-child(2) {
+    /*1rida 2.lahter, 3.rida 2.lahter*/
+    background-color: gold;
+    width: 18%;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(3),
+#rootsi tr:nth-child(3) td:nth-child(3) {
+    /*1rida 3.lahter, 3.rida 3.lahter*/
+    background-color: blue;
+}
+
+#eesti {
+    width: 330px;
+    height: 210px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#eesti tr:nth-child(2) {
+    /*2.rida*/
+    background-color: black;
+    height: 33%;
+}
+
+#eesti tr:nth-child(1) {
+    /*1.rida*/
+    background-color: blue;
+    height: 33%;
+}
+
+#eesti tr:nth-child(3) {
+    /*3.rida*/
+    background-color: whitesmoke;
+    height: 33%;
+}
+
+#prantsusmaa {
+    width: 330px;
+    height: 210px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#prantsusmaa tr:nth-child(1) {
+    /* nth-shild(1) первый ряд синий и имеет ширину 22% */
+    /*1.rida*/
+    background-color: darkblue;
+    width: 33%;
+}
+
+#prantsusmaa tr:nth-child(2) {
+    /* nth-shild(2) второй ряд белый и имиеет ширину в 33% */
+    /*2.rida*/
+    background-color: whitesmoke;
+    width: 33%;
+}
+
+#prantsusmaa tr:nth-child(3) {
+    /* nth-shild(3) третий ряд красный и имеет ширину 33% */
+    /*3.rida*/
+    background-color: darkred;
+    width: 33%;
+}
+
+
+#sveits {
+    width: 300px;
+    height: 300px;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+
+#sveits tr:nth-child(1),
+#sveits tr:nth-child(5) {
+    /* первая и пятая строки красные */
+    background-color: red;
+}
+#sveits tr:nth-child(3) td:nth-child(2),
+#sveits tr:nth-child(3) td:nth-child(3),
+#sveits tr:nth-child(3) td:nth-child(4),
+#sveits tr:nth-child(4) td:nth-child(2),
+#sveits tr:nth-child(2) td:nth-child(2)
+    /* белый крест */
+{
+    background-color: white;
+
+}
+#sveits tr:nth-child(2) td:nth-child(1),
+    /* второй ряд первая ячейка красная */
+#sveits tr:nth-child(2) td:nth-child(3),
+    /* второй ряд третья ячейка красная */
+#sveits tr:nth-child(4) td:nth-child(1),
+    /* чертвертый ряд первая ячейка красная */
+#sveits tr:nth-child(4) td:nth-child(3) {
+    /* червертый ряд третья ячейка красная*/
+    /*все ячейкт имеют высоту 22% от заданной и 41% от заданной ширины*/
+    background-color: red;
+    width: 41%;
+    height: 22%;
+
+}
+
+#sveits tr:nth-child(3) td:nth-child(1),
+    /* третий ряд первая ячейка красная */
+#sveits tr:nth-child(3) td:nth-child(5) {
+    /* третий ряд пятая ячейка красная */
+    background-color: red;
+    width: 18%;
+    height: 15%;
+}
+
+
+#norra {
+    width: 330px; /*заданная ширина*/
+    height: 210px; /*заданная высота*/
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+
+#norra tr:nth-child(1) td:nth-child(1) {
+    /* первый ряд первая ячейка красная имеют ширину 16% от заданной*/
+    background-color: red;
+    width: 16%;
+}
+
+#norra tr:nth-child(1) td:nth-child(5) {
+    /* первый ряд пятая ячейка красная имеют ширину 60% от заданной*/
+    background-color: red;
+    width: 60%;
+}
+
+#norra tr:nth-child(5) td:nth-child(1),
+#norra tr:nth-child(5) td:nth-child(5) {
+    /*пятый ряд первая и пятая учейки красные имеют высоту и ширины 20% от заданной*/
+    background-color: red;
+    width: 20%;
+    height: 20%;
+}
+
+#norra tr:nth-child(1) td:nth-child(2),
+#norra tr:nth-child(1) td:nth-child(4),
+#norra tr:nth-child(5) td:nth-child(4),
+#norra tr:nth-child(2) td:nth-child(4) {
+    /*первый ряд вторая и четвертая, пятый ряд четвертая и второй ряд четвертая ячейки белые и имеют ширину 4% от 330 рх*/
+    background-color: whitesmoke;
+    width: 4%;
+}
+
+#norra tr:nth-child(5) td:nth-child(2),
+#norra tr:nth-child(5) td:nth-child(4),
+#norra tr:nth-child(2),
+#norra tr:nth-child(4) {
+
+    /*пятый ряд вторая и чертвертая ячейки белые и второй и четвертый ряд белые и имеют высоту 4% от 210px и 4% от 330 рх ширины*/
+
+    background-color: whitesmoke;
+    width: 4%;
+    height: 4%;
+}
+
+#norra tr:nth-child(1) td:nth-child(3) {
+    /*первый ряд третья ячейка синяя и имеет высоту в 15% от 210px и 10% от 330px */
+    background-color: darkblue;
+    width: 10%;
+    height: 15%;
+}
+
+#norra tr:nth-child(5) td:nth-child(3),
+#norra tr:nth-child(2) td:nth-child(2),
+#norra tr:nth-child(4) td:nth-child(2) {
+    /*третья ячейка пятого ряда, вторая ячейка второго ряди и вторая ячейка четвертого ряда имеют синий цвет*/
+    background-color: darkblue;
+}
+
+#norra tr:nth-child(3) {
+    /*третий ряд имеет синий цвет и высоту 7% от 210px */
+    background-color: darkblue;
+    height: 7%;
+}

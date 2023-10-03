@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<!--komment-->
+
+<html lang="et">
+<head>
+  <!-- tehniline info -->
+  <title>Ivanenko koduleht</title>
+  <meta charset="UTf-8">
+  <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/style_second_design.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script
+          src="https://code.jquery.com/jquery-3.6.0.js"
+          integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+          crossorigin="anonymous"></script>
+  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+  <script type="text/javascript">
+    function liigutus(event, ui){
+      var asukoht=ui.offset;
+      $("#vastusekiht").html(asukoht.top+" "+asukoht.left);
+      //https://pastebin.com/praQBECF
+    }
+
+
+    var lahti=true;
+    function peida_ava(){
+      $('#slide').slideToggle();
+      if(lahti){
+        lahti=false;
+        $('#nupp').val("AVA");//nupptekst id=nupp value=?
+
+      } else {
+        lahti=true;
+        $('#nupp').val("PEIDA");
+      }
+
+    }
+    function oranz(){
+      //div-tekst värvitakse oranziks kui hiir liigub teksti peale
+      $('#texth2, h2').css('color','orange');
+    }
+    function must(){
+      //div-tekst värvitakse mustaks kui hiir liigub teksti peale
+      $('#texth2, h2').css('color','black');
+    }
+    function punaseks(){
+      $('h2, span#test').css("color", "red");
+    }
+    function mustaks(){
+      $('h2, span#test').css("color", "black");
+    }
+    function teatis(){
+      alert("Tekst on näidetud!");
+    }
+
+    function start(){
+      $("#ala").draggable();
+      $("#ala").after("<p>draggable</p>")
+      $("#ala").bind("drag", liigutus);
+      $('#texth1, h1').mouseenter(oranz);
+      $('#texth2, h2').mouseleave(must);
+      $('#menu, span#test').mouseenter(punaseks);
+      $('#menu, span#test').mouseleave(mustaks);
+      $('')
+
+    }
+    function ajavalik(aeg, sss){
+      var aeg=$("#dateala2").datepicker("getDate");
+      $("#vastus").html("Valitud päev on "+ aeg);
+
+    }
+    $(document).ready(function(){
+      $("#dateala1").datepicker({
+        onSelect: ajavalik,
+        dateFormat: 'yy-mm-dd',
+        firstDay:1,
+        dayNamesMin: ['P', 'E', 'T', 'K', 'N', 'R', 'L']
+      });
+      $("#dateala2").datepicker({
+        onSelect: ajavalik,
+        dateFormat: 'yy-mm-dd',
+        firstDay:1,
+        dayNamesMin:['P','E', 'T', 'K', 'N', 'R', 'L' ]
+      });
+    });
+  </script>
+</head>
+<body onLoad="start()">
+<header>
+  <h1 id="texth1">Ivanenko leht</h1>
+  <h2 id="texth2">Veebirakenduste töödeleht</h2>
+</header>
+
+<!--navigeerimismenüü -->
+<nav class="navbar navbar-expand-md navbar-light sticky-top" id="menu">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Avaleht</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Old_Design/index.html">Vana avaleht</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="tood.html">Tööde lingid</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oppmat.html">Õppemateriaalid</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="form.html">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="WP">Wordpress-portfoolio</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Sisu3</h5>
+            <p class="card-text" id="slide" style="position: relative;">Задача организации,
+              в особенности же курс на социально-ориентированный национальный проект,
+              в своём классическом представлении, допускает внедрение новых предложений.
+              Однозначно, сделанные на базе интернет-аналитики выводы, превозмогая сложившуюся непростую экономическую ситуацию,
+              функционально разнесены на независимые элементы.
+              В частности, консультация с широким активом создаёт предпосылки для новых предложений.</p>
+            <br>
+            <input type="button" value="Peida" id="nupp" onclick="peida_ava()">
+            <br>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card">
+          <div class="card-body" >
+            <h5 class="card-title">Ilus M-töht</h5>
+            <p class="card-text" id="raz-after"><img alt="M pilt" src="pictures/pic1.png" id="ala"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" id="vastus"></h5>
+            <div id="dateala2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-light py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>&copy; 2023 - Ivan Ivanenko</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="index.html">Avaleht</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+
+
+
+</html>

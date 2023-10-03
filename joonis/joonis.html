@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Joonistamine</title>
+  <script src="joonis_script.js"></script>
+</head>
+<body>
+<h1>Ilus joonis</h1>
+<canvas id="joonis" width="400px" height="300px" style="border: #1a1e21 solid 1px; background-color: #0dcaf0">
+
+
+</canvas>
+<br>
+<input type="button" value="Kustuta" onclick="kustuta()">
+<input type="button" value="Ring" onclick="ring()">
+<input type="button" value="Joon" onclick="liin()">
+<input type="button" value="Koos" onclick="koos()">
+<br>
+<label for="laius">Laius</label>
+<input type="number" id="laius" min="10" max="300" step="10">
+<label for="korgus">Korgus</label>
+<input type="number" id="korgus" min="10" max="200" step="10">
+<input type="button" value="Ristkülik" onclick="riskulik()">
+</body>
+</html>

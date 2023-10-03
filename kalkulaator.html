@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>JS katsed</title>
+  <link rel="stylesheet" type="text/css" href="css/style_second_design.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript"></script>
+  <script src="js/test.js"></script>
+</head>
+<body>
+
+<h1>Harjutus 2. Sisesta kogus ja vali valuuta</h1>
+<div class="row">
+  <div class="card">
+    <div class="card-body">
+      <form name="var1" id="var1">
+        <h2>Valuuta kalkulaator</h2>
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">Valuuta</th>
+            <th scope="col">Valuuta</th>
+            <th scope="col">TO valuuta</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <input type="radio" name="valuuta" id="dollar" value="dollar" onchange="radioChange(event)">
+                  <label for="dollar">Dollar</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="radio" name="valuuta" id="kroon" value="kroon" onchange="radioChange(event)">
+                  <label for="kroon">SEK</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="radio" name="valuuta" id="rub" value="rub" onchange="radioChange(event)">
+                  <label for="rub">Rub</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="radio" name="valuuta" id="frank" value="frank" onchange="radioChange(event)">
+                  <label for="frank">Frank</label>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <label for="valik">
+                <select id="valik" onchange="selectOptionChange(event)">
+                  <option>---valik---</option>
+                  <option value="dollar">Dollar</option>
+                  <option value="rub">Rub</option>
+                  <option value="kroon">SEK</option>
+                  <option value="frank">Frank</option>
+                </select>
+              </label>
+            </td>
+            <td>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <input type="checkbox" name="valuuta1" id="dollar1" value="dollar" onchange="checkboxValik(event)">
+                  <label for="dollar1">Dollar</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="valuuta1" id="kroon1" value="kroon" onchange="checkboxValik(event)">
+                  <label for="kroon1">Sek</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="valuuta1" id="rub1" value="rub" onchange="checkboxValik(event)">
+                  <label for="rub1">Rub</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="valuuta1" id="frank1" value="frank" onchange="checkboxValik(event)">
+                  <label for="frank1">Frank</label>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <label for="kogus">Kogus:</label>
+                  <input type="number" id="kogus" name="kogus">
+                  <div id="vastus"></div>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <input type="button" value="OK" onclick="validateForm()">
+                </li>
+              </ul>
+            </td>
+            <td colspan="2">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <input type="button" value="Clear" onclick="clearFields()">
+                </li>
+              </ul>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <title>Ivanenko koduleht</title>
+    <meta charset="UTf-8">
+    <link rel="stylesheet" type="text/css" href="css/form_style.css">
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style_second_design.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/form_script.js"></script>
+</head>
+<body>
+<header>
+    <h1>Ivanenko leht</h1>
+    <h2>Ilmateenuste küsimutik</h2>
+</header>
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Avaleht</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Old_Design/index.html">Vana avaleht</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="tood.html">Tööde lingid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="oppmat.html">Õppemateriaalid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="form.html">Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="WP">Wordpress-portfoolio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <div class="card-body">
+                        <form name="KusiVorm">
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <label class="strong_text" for="nimi">Sisesta oma nimi:</label>
+                                                <ul class="my-list">
+                                                    <input type="text" name="nimi" id="nimi" placeholder="Eesnimi" oninput="loe()">
+                                                </ul>
+                                                <div class="row">
+                                                    <div class="col-md">
+                                                        <section>
+                                                            <div class="strong_text">   Vali sugu:</div>
+                                                            <ul class="my-list">
+                                                                <li>
+                                                                    <input type="radio" name="sugu" id="mees" value="mees" onchange="loe()">
+                                                                    <label for="mees">mees</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" name="sugu" id="naine" value="naine" onchange="loe()">
+                                                                    <label for="naine">naine</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" name="sugu" id="valimata" value="valimata" onchange="loe()">
+                                                                    <label for="valimata">valimata</label>
+                                                                </li>
+                                                            </ul>
+                                                        </section>
+                                                    </div>
+                                                    <div class="col-md">
+                                                        <section>
+                                                            <img src="pictures/no.png" alt="pilt" id="pilt" width="80px" height="100px">
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                                <section>
+                                                    <div class="strong_text">Jalgin ilmateated</div>
+                                                    <ul class="my-list">
+                                                        <li>
+                                                            <input type="checkbox" name="teate" id="ilm1" value="1 kord paevas" onchange="checkboxValik()">
+                                                            <label for="ilm1">1 kord paevas</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="teate" id="ilm2" value="1 kord nadalas" onchange="checkboxValik()">
+                                                            <label for="ilm2">1 kord nadalas</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="teate" id="ilm3" value="uldse ei vaata" onchange="checkboxValik()">
+                                                            <label for="ilm3">uldse ei vaata</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="teate" id="ilm4" value="kui tuleb torm" onchange="checkboxValik()">
+                                                            <label for="ilm4">kui tuleb torm</label>
+                                                        </li>
+                                                    </ul>
+                                                </section>
+                                                <section>
+                                                    <div class="strong_text">Milline veebileht sa kasutad ilmateavet vadata?</div>
+                                                    <ul class="my-list">
+                                                        <li>
+                                                            <select id="veeb" onchange="selectValik()">
+                                                                <option>
+                                                                    <div class=""></div>
+                                                                </option>
+                                                                <option value="www.ilm.ee">www.ilm.ee</option>
+                                                                <option value="www.yr.no">www.yr.no</option>
+                                                                <option value="www.gismeteo.com">www.gismeteo.com</option>
+                                                            </select>
+                                                        </li>
+                                                        <li>
+                                                            <input type="button" value="Loe andmed" onclick="loe()">
+                                                            <input type="reset" value="Puhasta" onclick="kustuta()">
+                                                            <div id="vastus"></div>
+                                                        </li>
+                                                    </ul>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="bg-light py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2023 - Ivan Ivanenko</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="index.html">Avaleht</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

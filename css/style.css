@@ -1,0 +1,87 @@
+body{
+    background-color: darkslategrey;
+    color: papayawhip;
+    font-family: "Comic Sans MS";
+    margin: 1%;
+    align-items: center;
+}
+header{
+    border: solid 2pt black; /* solid, dotted, dashed. double */
+    padding: 1%;
+    width: 50%;
+    border-radius: 60px;
+    border-top-color: red;
+}
+main{
+    margin-top: 2%;
+
+}
+.display_align{
+    display: flex;
+}
+.main-wrap{
+    width: 90%;
+}
+header h1{
+    letter-spacing: 0.2cm;
+    font-variant-caps: all-petite-caps;
+    font-size: xx-large;
+    text-align: center;
+}
+header h2{
+    letter-spacing: 0.1cm;
+    font-variant-caps: all-petite-caps;
+    font-size: large;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    align-content: center;
+    margin: 5px;
+    border: solid 2pt black;
+    padding: 1%;
+}
+nav ul{
+    margin-left: 3%;
+}
+nav{
+    margin-top: 2%;
+}
+nav ul li:hover{/*hover - fookuses*/
+    background-color: yellow;
+}
+nav a:active, nav a:visited, nav a:link{
+    text-decoration: none;
+    color: brown;
+    font-variant: small-caps;
+}
+a:hover{
+    text-decoration: underline;
+}
+#part1{
+    margin-left: 2%;
+    flex-basis: 15%;
+    width: 30%;
+    background-color: dimgrey;
+    height: 200px;
+    padding: 2%;
+    border: solid 2pt black;
+}
+#part2{
+    margin-left: 2%;
+    flex-basis: 15%;
+    width: 30%;
+    background-color: dimgray;
+    height: 200px;
+    padding: 2%;
+    border: solid 2pt black;
+}
+#part3{
+    margin-left: 2%;
+    flex-basis: 15%;
+    width: 30%;
+    background-color: dimgray;
+    height: 200px;
+    padding: 2%;
+    border: solid 2pt black;
+}

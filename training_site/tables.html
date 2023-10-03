@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <title>Ivanenko tabelid</title>
+    <meta charset="UTf-8">
+    <link rel="stylesheet" type="text/css" href="css/form_style.css">
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style_second_design.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/form_script.js"></script>
+</head>
+<body>
+<header>
+    <h1>Ivanenko leht</h1>
+    <h2>Tabelid</h2>
+</header>
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Avaleht</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Old_Design/index.html">Vana avaleht</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="tood.html">Tööde lingid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="oppmat.html">Õppemateriaalid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="form.html">Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="WP">Wordpress-portfoolio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <h1>Tabel 1 - colspan</h1>
+                <caption>Lihtne tabel colspan omadusega</caption>
+                <table class="table table-bordered table-light table-responsive-md" style="width: 50%; border: 1px solid black">
+                    <tr>
+                        <td colspan="3">A</td>
+                    </tr>
+                    <tr>
+                        <td>Da</td>
+                        <td>Net</td>
+                        <td>Maybe</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <h1>Tabel 2 - rowspan</h1>
+                <caption>Lihtne tabel rowspan omadusega</caption>
+                <table class="table table-bordered table-light table-responsive-md" style="width: 50%; border: 1px solid black">
+                    <tr>
+                        <td>A</td>
+                        <td rowspan="3">D</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <h1>Tabel 3 - selfmade</h1>
+                <table class="table table-bordered table-light table-responsive-md" style="width: 50%; border: 1px solid black">
+                    <tbody>
+                        <tr>
+                            <th colspan="3">1</th>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">5</td>
+                            <td rowspan="2">7</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">6</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <h1>Tabel 4 - selfmade by teacher</h1>
+                <table class="table table-bordered table-light table-responsive-md" style="width: 50%; border: 1px solid black">
+                    <tbody>
+                    <tr>
+                        <th colspan="5">??</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">D</td>
+                        <td colspan="3">E</td>
+                        <td rowspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>A</td>
+                        <td rowspan="2">F</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">С</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">??</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="bg-light py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2023 - Ivan Ivanenko</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="index.html">Avaleht</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
