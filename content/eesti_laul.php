@@ -1,8 +1,6 @@
-session_start();
 <?php
 global $yhendus;
-require_once('../config/conf.php');
-
+require('config/conf.php');
 //update table points
 
 if (isset($_REQUEST["healaul"]))
@@ -14,7 +12,7 @@ if (isset($_REQUEST["healaul"]))
     );
     $kask->bind_param("i",$_REQUEST["healaul"]);
     $kask->execute();
-    header("Location: PHP_works_page.php?leht=eesti_laul.php&healaul=$id");
+    header("Location: $_SERVER[PHP_SELF]");
 }
 //delete table points -1
 

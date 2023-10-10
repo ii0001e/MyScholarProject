@@ -1,6 +1,6 @@
 <?php
 global $yhendus;
-require('config/conf.php');
+require('../config/conf.php');
 
 if (isset($_REQUEST["Lisamisvorm"]) && !empty($_REQUEST["kalanimi"]))
 {

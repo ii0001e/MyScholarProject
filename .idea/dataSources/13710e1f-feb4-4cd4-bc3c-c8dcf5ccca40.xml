@@ -1137,8 +1137,8 @@
     </schema>
     <schema id="325" parent="1" name="ivanivanenko">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-09-26.19:20:43</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-26.13:20:43</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-10-10.14:41:51</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-10-10.08:41:51</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="326" parent="1" name="mysql">
@@ -1172,108 +1172,271 @@
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="336" parent="325" name="kalad">
+    <table id="336" parent="325" name="jalgrattaeksam">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="337" parent="325" name="uudised">
+    <table id="337" parent="325" name="kalad">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="338" parent="335" name="id">
-      <AutoIncrement>1</AutoIncrement>
+    <table id="338" parent="325" name="kasutajad">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="339" parent="325" name="kaubad">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="340" parent="325" name="kaubagrupid">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="341" parent="325" name="uudised">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="342" parent="335" name="id">
+      <AutoIncrement>3</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="339" parent="335" name="laulu_nimi">
+    <column id="343" parent="335" name="laulu_nimi">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="340" parent="335" name="laulja">
+    <column id="344" parent="335" name="laulja">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="341" parent="335" name="punktid">
+    <column id="345" parent="335" name="punktid">
       <DasType>int(11)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="342" parent="335" name="kommentaarid">
+    <column id="346" parent="335" name="kommentaarid">
       <DasType>text|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="343" parent="335" name="avalik">
+    <column id="347" parent="335" name="avalik">
       <DasType>int(11)|0s</DasType>
       <DefaultExpression>1</DefaultExpression>
       <Position>6</Position>
     </column>
-    <index id="344" parent="335" name="PRIMARY">
+    <index id="348" parent="335" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="345" parent="335" name="PRIMARY">
+    <key id="349" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="346" parent="336" name="id">
+    <column id="350" parent="336" name="id">
+      <AutoIncrement>23</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="351" parent="336" name="eesnimi">
+      <DasType>varchar(30)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="352" parent="336" name="perekonnanimi">
+      <DasType>varchar(30)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="353" parent="336" name="teooriatulemus">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>4</Position>
+    </column>
+    <column id="354" parent="336" name="slaalom">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>5</Position>
+    </column>
+    <column id="355" parent="336" name="ringtee">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="356" parent="336" name="t2nav">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <column id="357" parent="336" name="luba">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <index id="358" parent="336" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="359" parent="336" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="360" parent="337" name="id">
       <AutoIncrement>10</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="347" parent="336" name="kalanimi">
+    <column id="361" parent="337" name="kalanimi">
       <DasType>varchar(20)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="348" parent="336" name="pilt">
+    <column id="362" parent="337" name="pilt">
       <DasType>text|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="349" parent="336" name="varv">
+    <column id="363" parent="337" name="varv">
       <DasType>varchar(10)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="350" parent="336" name="PRIMARY">
+    <index id="364" parent="337" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="351" parent="336" name="PRIMARY">
+    <key id="365" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="352" parent="337" name="id">
+    <column id="366" parent="338" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="367" parent="338" name="kasutaja">
+      <DasType>varchar(30)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="368" parent="338" name="password">
+      <DasType>varchar(30)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <index id="369" parent="338" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="370" parent="338" name="kasutaja">
+      <ColNames>kasutaja</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="371" parent="338" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="372" parent="338" name="kasutaja">
+      <UnderlyingIndexName>kasutaja</UnderlyingIndexName>
+    </key>
+    <column id="373" parent="339" name="id">
       <AutoIncrement>9</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="353" parent="337" name="teema">
-      <DasType>varchar(30)|0s</DasType>
+    <column id="374" parent="339" name="nimetus">
+      <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="354" parent="337" name="kuupaev">
-      <DasType>date|0s</DasType>
+    <column id="375" parent="339" name="kaubagrupi_id">
+      <DasType>int(11)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="355" parent="337" name="kirjeldus">
-      <DasType>text|0s</DasType>
+    <column id="376" parent="339" name="hind">
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="356" parent="337" name="varv">
-      <DasType>varchar(30)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <index id="357" parent="337" name="PRIMARY">
+    <foreign-key id="377" parent="339" name="fk_kaubagrupid">
+      <ColNames>kaubagrupi_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>kaubagrupid</RefTableName>
+    </foreign-key>
+    <index id="378" parent="339" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="358" parent="337" name="PRIMARY">
+    <index id="379" parent="339" name="fk_kaubagrupid">
+      <ColNames>kaubagrupi_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="380" parent="339" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="381" parent="340" name="id">
+      <AutoIncrement>11</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="382" parent="340" name="grupinimi">
+      <DasType>varchar(255)|0s</DasType>
+      <DefaultExpression>&apos;NOT NULL&apos;</DefaultExpression>
+      <Position>2</Position>
+    </column>
+    <index id="383" parent="340" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="384" parent="340" name="grupinimi">
+      <ColNames>grupinimi</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="385" parent="340" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="386" parent="340" name="grupinimi">
+      <UnderlyingIndexName>grupinimi</UnderlyingIndexName>
+    </key>
+    <column id="387" parent="341" name="id">
+      <AutoIncrement>9</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="388" parent="341" name="teema">
+      <DasType>varchar(30)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="389" parent="341" name="kuupaev">
+      <DasType>date|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="390" parent="341" name="kirjeldus">
+      <DasType>text|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="391" parent="341" name="varv">
+      <DasType>varchar(30)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <index id="392" parent="341" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="393" parent="341" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
