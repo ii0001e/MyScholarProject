@@ -1,3 +1,10 @@
+<?php
+global $yhendus, $kaubad;
+require('../config/conf.php');
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="et">
 
@@ -31,10 +38,15 @@
                     <a href="kaubaMuutmine.php?sort=hind">Hind</a>
                 </th>
             </tr>
-            <?php foreach($kaubad as $kaup): ?>
+            <?php
+            foreach($kaubad as $kaup):
+
+                ?>
                 <tr>
-                    <?php if(isSet($_REQUEST["muutmisid"]) &&
-                        intval($_REQUEST["muutmisid"])==$kaup->id): ?>
+                    <?php
+                    if(isSet($_REQUEST["muutmisid"]) &&
+                        intval($_REQUEST["muutmisid"])==$kaup->id):
+                        ?>
                     <td>
                         <input type="submit" name="muutmine" value="Muuda" class="btn btn-warning"/>
                         <input type="submit" name="katkestus" value="Katkesta" class="btn btn-info" />

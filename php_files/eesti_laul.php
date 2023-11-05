@@ -14,7 +14,7 @@ if (isset($_REQUEST["healaul"]))
     );
     $kask->bind_param("i",$_REQUEST["healaul"]);
     $kask->execute();
-    header("Location: PHP_works_page.php?leht=eesti_laul.php&healaul=$id");
+    header("Location: $_SERVER[PHP_SELF]");
 }
 //delete table points -1
 
@@ -81,6 +81,7 @@ if (isset($_REQUEST["delete_komment"]))
 
 
 ?>
+<body>
 <div class="row">
 <div class="col-md">
 <div class="card">
@@ -137,4 +138,4 @@ if (isset($_REQUEST["delete_komment"]))
 </div>
 </div>
 </div>
-
+</body>

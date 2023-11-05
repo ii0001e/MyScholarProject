@@ -89,3 +89,17 @@ UPDATE jalgrattaeksam SET ringtee=1 WHERE id=2;
 
 SELECT id, eesnimi, perekonnanimi FROM jalgrattaeksam
 WHERE slaalom=1 AND ringtee=1 AND t2nav=-1;
+
+
+create table Toolivahendus(
+                              id int PRIMARY KEY AUTO_INCREMENT,
+                              toon varchar(30),
+                              tellimiskogus int,
+                              valminudkogus int NULL
+);
+
+CREATE TABLE SecondTable (
+                             id int PRIMARY KEY AUTO_INCREMENT,
+                             toon varchar(30),
+                             FOREIGN KEY (toon) REFERENCES Toolivahendus(toon)
+);
